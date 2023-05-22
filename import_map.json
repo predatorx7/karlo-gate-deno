@@ -5,10 +5,12 @@
     "apollo/client": "npm:@apollo/client@^3.7.14",
     "apollo/server": "npm:@apollo/server@^4.7.1",
     "apollo/server/standalone": "npm:@apollo/server@4.7.1/standalone",
+    "express": "npm:express@4.18.2",
     "graphql": "npm:graphql@^16.6.0",
     "dotenv": "https://deno.land/std@0.188.0/dotenv/mod.ts",
     "deps": "./deps.ts",
     "dev_deps": "./dev_deps.ts",
+    "configs": "./src/configs.ts",
     "resolvers": "./src/resolvers.ts",
     "schema": "./src/schema.ts"
   }
