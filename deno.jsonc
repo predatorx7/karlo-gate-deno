@@ -1,7 +1,12 @@
 {
-    "tasks": {
-      "dev": "deno run --allow-net --allow-read --allow-env --watch main.ts --dev",
-      "serve": "deno run --allow-net --allow-read --allow-env --no-check main.ts"
-    },
-    "importMap": "./import_map.json"
-  }
+  "tasks": {
+    "cache": "deno cache --node-modules-dir src/main.ts",
+    "dev": "deno run --allow-net --allow-read --allow-env --allow-run  --watch src/main.ts --dev",
+    "dev:single": "deno run --allow-net --allow-read --allow-env --allow-run src/main.ts --dev",
+    "serve": "deno run --allow-net --allow-read --allow-env --allow-run --no-check src/main.ts",
+    "test": "deno test",
+    "test:coverage": "deno test --coverage=cov_profile",
+    "lcov": "deno coverage cov_profile --lcov --output=cov_profile.lcov"
+  },
+  "importMap": "./import_map.json"
+}
