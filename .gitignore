@@ -3,3 +3,4 @@
 # remove from lock if you wish
 deno.lock
 .env
+node_modules/
