@@ -1,11 +1,5 @@
-export const typeDefs = `
-  type Dinosaur {
-    name: String
-    description: String
-  }
+import dinosaur from "./dinosaur/schema.ts";
 
-  type Query {
-    dinosaurs: [Dinosaur]
-    dinosaur(name: String): Dinosaur
-  }
+export const typeDefs = `
+  ${dinosaur}
 `;

@@ -5,7 +5,7 @@ import { graphql as _graphql } from "graphql";
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import { PORT } from "./configs.ts";
+import config from "./configs.ts";
 import { typeDefs } from "schema";
 import { resolvers } from "resolvers";
 import { http } from "deps";
@@ -28,7 +28,7 @@ app.use(
 );
 
 await new Promise((resolve) =>
-  httpServer.listen({ port: PORT }, () => resolve(null))
+  httpServer.listen({ port: config.PORT }, () => resolve(null))
 );
 
-console.log(`🚀 Server ready at http://localhost:${PORT}`);
+console.log(`🚀 Server ready at http://localhost:${config.PORT}`);
